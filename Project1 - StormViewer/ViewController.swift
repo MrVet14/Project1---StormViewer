@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UICollectionViewController {
     var pictures = [String]()
+    var pictureOpenedNumberOfTime = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,10 @@ class ViewController: UICollectionViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         fetchPictures()
+        
+        let defaults = UserDefaults.standard
+        
+        pictureOpenedNumberOfTime = defaults.object(forKey: "pictureOpenedNumber") as? [Int] ?? pictureOpenedNumberOfTime
         
         collectionView.reloadData()
     }
@@ -29,6 +34,7 @@ class ViewController: UICollectionViewController {
         for item in items.sorted() {
             if item.hasPrefix("nssl") {
                 pictures.append(item)
+                pictureOpenedNumberOfTime.append(0)
             }
         }
     }
@@ -41,7 +47,7 @@ class ViewController: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? ImageCell else {
             fatalError("Unable to dequeue PersonCell.")
         }
-        cell.name.text = pictures[indexPath.item].replacingOccurrences(of: ".jpg", with: "")
+        cell.name.text = pictures[indexPath.item].replacingOccurrences(of: ".jpg", with: "") + " \'\(pictureOpenedNumberOfTime[indexPath.row])\'"
         cell.imageView.image = UIImage(named: pictures[indexPath.item])
         
         cell.imageView.layer.borderColor = UIColor(white: 0, alpha: 0.3).cgColor
@@ -57,7 +63,15 @@ class ViewController: UICollectionViewController {
             vc.selectedImage = pictures[indexPath.row]
             vc.picturesNumbersOut = "Picture \(indexPath.row + 1) of \(pictures.count)"
             navigationController?.pushViewController(vc, animated: true)
+            pictureOpenedNumberOfTime[indexPath.row] += 1
+            save()
+            collectionView.reloadData()
         }
+    }
+    
+    func save() {
+            let defaults = UserDefaults.standard
+            defaults.set(pictureOpenedNumberOfTime, forKey: "pictureOpenedNumber")
     }
     
 }
