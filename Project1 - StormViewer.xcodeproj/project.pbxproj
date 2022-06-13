@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		515EB8162800B52700C10CC2 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EB8152800B52700C10CC2 /* ImageCell.swift */; };
 		51C8202B27CE761D0065C794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8202A27CE761D0065C794 /* AppDelegate.swift */; };
 		51C8202D27CE761D0065C794 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8202C27CE761D0065C794 /* SceneDelegate.swift */; };
 		51C8202F27CE761D0065C794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8202E27CE761D0065C794 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		515EB8152800B52700C10CC2 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		51C8202727CE761D0065C794 /* Project1 - StormViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project1 - StormViewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C8202A27CE761D0065C794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51C8202C27CE761D0065C794 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				51C8202A27CE761D0065C794 /* AppDelegate.swift */,
 				51C8202C27CE761D0065C794 /* SceneDelegate.swift */,
 				51C8202E27CE761D0065C794 /* ViewController.swift */,
+				515EB8152800B52700C10CC2 /* ImageCell.swift */,
 				51C8205327CE83D80065C794 /* DetailViewController.swift */,
 				51C8203027CE761D0065C794 /* Main.storyboard */,
 				51C8203327CE761E0065C794 /* Assets.xcassets */,
@@ -193,6 +196,7 @@
 				51C8202B27CE761D0065C794 /* AppDelegate.swift in Sources */,
 				51C8202D27CE761D0065C794 /* SceneDelegate.swift in Sources */,
 				51C8205427CE83D80065C794 /* DetailViewController.swift in Sources */,
+				515EB8162800B52700C10CC2 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +348,7 @@
 				DEVELOPMENT_TEAM = V936C69V6G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Project1 - StormViewer/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Project1a -StormViewer";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -354,7 +359,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "vitalivyucheiski.Project1---StormViewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "vitalivyucheiski.Project1a---StormViewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -372,6 +377,7 @@
 				DEVELOPMENT_TEAM = V936C69V6G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Project1 - StormViewer/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Project1a -StormViewer";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -382,7 +388,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "vitalivyucheiski.Project1---StormViewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "vitalivyucheiski.Project1a---StormViewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
